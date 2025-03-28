@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Pream-Rakshitha/static/css/main.b2976139.css",
+    "main.js": "/Pream-Rakshitha/static/js/main.7cdf034c.js",
+    "static/js/787.ce8a8ee2.chunk.js": "/Pream-Rakshitha/static/js/787.ce8a8ee2.chunk.js",
+    "static/media/9.jpg": "/Pream-Rakshitha/static/media/9.3d4c280f176c3eb11527.jpg",
+    "static/media/2.jpg": "/Pream-Rakshitha/static/media/2.abc48417614add3098bb.jpg",
+    "static/media/1.jpg": "/Pream-Rakshitha/static/media/1.64aa0f8e3c4e3d39c2b2.jpg",
+    "static/media/5.jpg": "/Pream-Rakshitha/static/media/5.3583be488f14d5e81e09.jpg",
+    "static/media/6.jpg": "/Pream-Rakshitha/static/media/6.fcd81172126a2cfd82d0.jpg",
+    "static/media/8.jpg": "/Pream-Rakshitha/static/media/8.49006f5e323de7268992.jpg",
+    "static/media/7.jpg": "/Pream-Rakshitha/static/media/7.b8e8d9867c8fe86574b5.jpg",
+    "static/media/3.jpg": "/Pream-Rakshitha/static/media/3.d991d7551937ecc036ce.jpg",
+    "static/media/vid.mp4": "/Pream-Rakshitha/static/media/vid.ef6d0ea7ddf291e63642.mp4",
+    "static/media/4.jpg": "/Pream-Rakshitha/static/media/4.d24cd02d92e5f420765f.jpg",
+    "static/media/door2.jpg": "/Pream-Rakshitha/static/media/door2.41e9714a46e26e52f61d.jpg",
+    "static/media/door1.jpg": "/Pream-Rakshitha/static/media/door1.c191fa4d2708704f4dff.jpg",
+    "index.html": "/Pream-Rakshitha/index.html",
+    "main.b2976139.css.map": "/Pream-Rakshitha/static/css/main.b2976139.css.map",
+    "main.7cdf034c.js.map": "/Pream-Rakshitha/static/js/main.7cdf034c.js.map",
+    "787.ce8a8ee2.chunk.js.map": "/Pream-Rakshitha/static/js/787.ce8a8ee2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2976139.css",
+    "static/js/main.7cdf034c.js"
+  ]
+}
