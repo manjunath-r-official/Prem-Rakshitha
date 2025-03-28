@@ -2,7 +2,7 @@
   "name": "invitation",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://manjunath-r-official.github.io/invitation",
+  "homepage": "https://manjunath-r-official.github.io/Pream-Rakshitha/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b WeddingInvitation"
+    "deploy": "gh-pages -d build -b WeddingInvitation -r https://github.com/manjunath-r-official/invitation.git"
   },
   "eslintConfig": {
     "extends": [
