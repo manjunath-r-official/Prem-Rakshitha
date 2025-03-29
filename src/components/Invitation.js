@@ -18,6 +18,7 @@ const Invitation = () => {
   const [timeRemaining, setTimeRemaining] = useState({});
   const rowsRef = useRef([]); // Ref to track rows
   const headingRef = useRef(null); // Ref to track the heading
+  const cardsRef = useRef([]); // Ref to track cards
 
   const carouselImages = [
     image1,
@@ -65,6 +66,11 @@ const Invitation = () => {
       if (row) observer.observe(row);
     });
 
+    // Observe the cards
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
     return () => {
       if (headingRef.current) {
         observer.unobserve(headingRef.current);
@@ -72,8 +78,11 @@ const Invitation = () => {
       rowsRef.current.forEach((row) => {
         if (row) observer.unobserve(row);
       });
+      cardsRef.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
     };
-  }, []);
+  }, []); // Removed `hasTyped` dependency
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -143,9 +152,9 @@ const Invitation = () => {
         <Carousel images={carouselImages} />
       </div>
 
-      <div className="section-4">
+      {/* <div className="section-4">
         <div className="groom-name">
-          <h1>Pream</h1> {/* Replace with the groom's name */}
+          <h1>Pream</h1>
         </div>
         <div className="rotating-mandala">
           <div className="mandala-container">
@@ -153,7 +162,7 @@ const Invitation = () => {
             <img src={require('../images/feather.png')} alt="Small Image" className="small-image" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="section-5">
         <div
@@ -161,8 +170,8 @@ const Invitation = () => {
           className="section-5-heading"
         >
           <h1 className="main-heading">
-            #Saptapadi
             <img src={require('../images/feather.png')} alt="Feather" className="feather-image" />
+            #Saptapadi
           </h1>
           <h2 className="sub-heading">
             <span>Seven</span> <span>Sacred</span> <span>Steps,</span> <span>Seven</span> <span>Promises,</span> <span>One</span> <span>Beautiful</span> <span>Journey</span>
@@ -202,6 +211,65 @@ const Invitation = () => {
       <div className="section-2">
         <h1>Join Us in Celebrating Love</h1>
         <p>We are thrilled to invite you to our wedding celebration.</p>
+      </div>
+
+      <div className="section-6">
+        <div
+          ref={(el) => (cardsRef.current[0] = el)} // Attach ref to the venue card
+          className="card venue-card"
+        >
+          <h2>Venue</h2>
+          <p>123 Wedding Street, Celebration City</p>
+          <button
+            className="google-maps-button"
+            onClick={() =>
+              window.open(
+                'https://www.google.com/maps/place/anekal,+bangalore',
+                '_blank'
+              )
+            }
+          >
+            Open in Google Maps
+          </button>
+        </div>
+
+        <div
+          ref={(el) => (cardsRef.current[1] = el)} // Attach ref to the reception card
+          className="card reception-card"
+        >
+          <h2>Reception</h2>
+          <p>Date: April 19th, 2025</p>
+          <p>Time: 6:00 PM</p>
+          <p>Location: Grand Celebration Hall, Celebration City</p>
+        </div>
+
+        <div
+          ref={(el) => (cardsRef.current[2] = el)} // Attach ref to the wedding card
+          className="card wedding-card"
+        >
+          <h2>Wedding</h2>
+          <p>Date: April 20th, 2025</p>
+          <p>Time: 9:45 AM</p>
+          <p>Location: Sacred Wedding Temple, Celebration City</p>
+        </div>
+
+        <div
+          ref={(el) => (cardsRef.current[3] = el)} // Attach ref to the contact card
+          className="card contact-card"
+        >
+          <h2>Contact Us</h2>
+          <p>Phone: +1 234 567 890</p>
+          <p>Email: wedding@celebration.com</p>
+          <button
+            className="whatsapp-button"
+            onClick={() =>
+              window.open('https://wa.me/7483147151', '_blank') // Replace 1234567890 with your phone number
+            }
+          >
+            WhatsApp Me
+          </button>
+        </div>
+
       </div>
 
     </div>

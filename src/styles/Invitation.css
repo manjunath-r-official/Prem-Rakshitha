@@ -259,6 +259,7 @@
 .section-5-heading {
   text-align: center;
   margin-bottom: 20px;
+  padding-top: 35px;
   opacity: 0; /* Initially hidden */
   transform: translateY(50px); /* Start slightly below */
   transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
@@ -275,14 +276,27 @@
   color: rgb(251, 181, 4); /* Gold color */
   text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.6);
   margin: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px; /* Add spacing between text and feather */
+  display: flex;
+  flex-direction: column; /* Stack feather and text vertically */
+  align-items: center; /* Center-align feather and text */
+  white-space: nowrap; /* Prevent text wrapping */
+  position: relative; /* Allow precise positioning of the feather */
+}
+
+.tiny-line {
+  font-family: 'Great Vibes', cursive; /* Apply Great Vibes font */
+  font-size: 1.2rem; /* Smaller font size */
+  color: #666; /* Subtle color */
+  margin-left: 10px; /* Add spacing between the main-heading and tiny line */
 }
 
 .feather-image {
   width: 50px;
   height: auto;
+  position: absolute;
+  top: -30px; /* Move the feather closer to the text */
+  left: 70%;
+  transform: translateX(-50%); /* Center the feather horizontally */
   animation: scribble 1.5s ease-in-out infinite; /* Scribble animation for the feather */
 }
 
@@ -418,6 +432,13 @@
   color: #333; /* Text color */
 }
 
+.tiny-line {
+  font-family: 'Great Vibes', cursive; /* Apply Great Vibes font */
+  font-size: 1.2rem; /* Smaller font size */
+  color: #666; /* Subtle color */
+  margin-bottom: 5px; /* Add spacing below the line */
+}
+
 .odd .image-column {
   order: 1; /* Image on the left for odd rows */
 }
@@ -432,6 +453,79 @@
 
 .even .text-column {
   order: 1; /* Text on the left for even rows */
+}
+
+.section-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Start slightly below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade-in animation */
+}
+
+.card.in-view {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Slide into place */
+}
+
+.card h2 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2rem;
+  color: rgb(251, 181, 4); /* Gold color */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.google-maps-button {
+  background-color: rgb(251, 181, 4); /* Gold color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.google-maps-button:hover {
+  background-color: #d4a304; /* Darker gold on hover */
+}
+
+.whatsapp-button {
+  background-color: rgb(251, 181, 4); /* WhatsApp green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Add spacing above the button */
+}
+
+.whatsapp-button:hover {
+  background-color: #d4a304; /* Darker green on hover */
 }
 
 @media (max-width: 768px) {
