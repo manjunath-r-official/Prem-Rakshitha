@@ -1,3 +1,6 @@
+/* Import the Great Vibes font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 .invitation-container {
   position: relative;
   width: 100%; /* Ensure the container does not exceed the viewport width */
@@ -77,6 +80,79 @@
   width: 100%; /* Ensure child sections take up the full width */
   box-sizing: border-box; /* Include padding in width calculations */
   overflow-x: hidden; /* Prevent horizontal overflow from child elements */
+}
+
+.section-4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* Prevent overflow */
+  height: 500px; /* Set the height of the section to match the mandala size */
+}
+
+.groom-name {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+  position: relative; /* Ensure the name is above the mandala */
+  z-index: 2; /* Place the groom's name above the mandala */
+}
+
+.groom-name h1 {
+  font-size: 2.5rem;
+  font-family: 'Alex Brush', cursive;
+  color: rgb(251, 181, 4); /* Gold color */
+  text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.6);
+}
+
+.rotating-mandala {
+  flex: 1;
+  position: absolute; /* Position the mandala absolutely within the section */
+  top: 0;
+  left: 0;
+  width: 100%; /* Span the entire section */
+  height: 100%; /* Match the section height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Place the mandala behind the groom's name */
+  overflow: hidden;
+}
+
+.mandala-container {
+  position: absolute;
+  width: 400px; /* Set the width of the mandala */
+  height: 400px; /* Set the height of the mandala to match the width */
+  border-radius: 50%; /* Ensure the container is a perfect circle */
+  overflow: hidden; /* Clip any overflow to maintain the circular shape */
+}
+
+.mandala {
+  width: 100%;
+  height: 100%;
+  animation: rotateClockwise 10s linear infinite; /* Rotate clockwise infinitely */
+  transform-origin: center; /* Fix wobbling by setting the rotation origin to the center */
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+}
+
+.small-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+}
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .slide-in-left, .slide-in-right {
@@ -171,6 +247,63 @@
     transform: translateY(-100%);
     opacity: 0;
   }
+}
+
+.section-5 {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; /* Add spacing between rows 
+  padding: 20px; */
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Add rounded corners to images */
+}
+
+.text-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.text-column p {
+  font-family: 'Great Vibes', cursive; /* Apply the Great Vibes font */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  color: #333; /* Text color */
+  line-height: 1.6; /* Adjust line height for readability */
+}
+
+.odd .image-column {
+  order: 1; /* Image on the left for odd rows */
+}
+
+.odd .text-column {
+  order: 2; /* Text on the right for odd rows */
+}
+
+.even .image-column {
+  order: 2; /* Image on the right for even rows */
+}
+
+.even .text-column {
+  order: 1; /* Text on the left for even rows */
 }
 
 @media (max-width: 768px) {

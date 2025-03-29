@@ -14,7 +14,7 @@ import image7 from '../images/carousel/7.jpg';
 import image8 from '../images/carousel/8.jpg';
 
 const Invitation = () => {
-  const weddingDate = new Date('2025-04-19T00:00:00');
+  const weddingDate = new Date('2025-04-20T09:45:00'); // Updated wedding date and time
   const [timeRemaining, setTimeRemaining] = useState({});
   const carouselImages = [
     image1,
@@ -26,6 +26,16 @@ const Invitation = () => {
     image7,
     image8,
   ]; // Use imported images
+
+  const paragraphTexts = [
+    "First Step: Promise to nourish and support each other.",
+    "Second Step: Commitment to grow together in strength and prosperity.",
+    "Third Step: Dedication to spiritual growth and happiness.",
+    "Fourth Step: Promise to love, respect, and trust each other.",
+    "Fifth Step: Commitment to care for family and children.",
+    "Sixth Step: Pledge for harmony, longevity, and companionship.",
+    "Seventh Step: Promise of lifelong friendship and loyalty."
+  ];
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -70,7 +80,7 @@ const Invitation = () => {
       <div className="section-1">
         <div className="slide-in-left">
           <h1>Save the Date</h1>
-          <p className="wedding-date">April 19, 2025</p>
+          <p className="wedding-date">April 19th & 20th, 2025</p>
         </div>
         <div className="slide-in-right">
           <p className="countdown-inline">
@@ -98,6 +108,44 @@ const Invitation = () => {
       <div className="section-2">
         <h1>Join Us in Celebrating Love</h1>
         <p>We are thrilled to invite you to our wedding celebration.</p>
+      </div>
+
+      <div className="section-4">
+        <div className="groom-name">
+          <h1>Pream</h1> {/* Replace with the groom's name */}
+        </div>
+        <div className="rotating-mandala">
+          <div className="mandala-container">
+            <img src={require('../images/mandala.png')} alt="Mandala" className="mandala" />
+            <img src={require('../images/feather.png')} alt="Small Image" className="small-image" />
+          </div>
+        </div>
+      </div>
+
+      <div className="section-5">
+        {paragraphTexts.map((text, index) => (
+          <div key={index} className={`row ${index % 2 === 0 ? 'even' : 'odd'}`}>
+            {index % 2 === 0 ? (
+              <>
+                <div className="column image-column">
+                  <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} />
+                </div>
+                <div className="column text-column">
+                  <p>{text}</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="column text-column">
+                  <p>{text}</p>
+                </div>
+                <div className="column image-column">
+                  <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} />
+                </div>
+              </>
+            )}
+          </div>
+        ))}
       </div>
 
     </div>
