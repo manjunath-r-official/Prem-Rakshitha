@@ -160,10 +160,12 @@ const Invitation = () => {
           ref={headingRef} // Attach ref to the heading
           className="section-5-heading"
         >
-          <h1 className="main-heading">#Saptapadi</h1>
-          <h2 className="sub-heading">
-            Seven Sacred Steps, Seven Promises, One Beautiful Journey
+          <h1 className="main-heading">
+            #Saptapadi
             <img src={require('../images/feather.png')} alt="Feather" className="feather-image" />
+          </h1>
+          <h2 className="sub-heading">
+            <span>Seven</span> <span>Sacred</span> <span>Steps,</span> <span>Seven</span> <span>Promises,</span> <span>One</span> <span>Beautiful</span> <span>Journey</span>
           </h2>
         </div>
         <div className="rows-container">

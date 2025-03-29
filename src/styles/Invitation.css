@@ -252,8 +252,8 @@
 .section-5 {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Add spacing between rows */
-  padding: 20px;
+  gap: 10px; /* Add spacing between rows */
+  padding: 5px;
 }
 
 .section-5-heading {
@@ -275,23 +275,53 @@
   color: rgb(251, 181, 4); /* Gold color */
   text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.6);
   margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between text and feather */
+}
+
+.feather-image {
+  width: 50px;
+  height: auto;
+  animation: scribble 1.5s ease-in-out infinite; /* Scribble animation for the feather */
 }
 
 .sub-heading {
   font-family: 'Lora', serif;
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 0.7rem; /* Smaller font size */
+  color: #666; /* Lighter color */
+  font-weight: normal; /* Remove boldness */
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 4px;
   position: relative;
 }
 
-.feather-image {
-  width: 30px;
-  height: auto;
-  animation: scribble 2s ease-in-out infinite; /* Scribble animation for the feather */
+.sub-heading span {
+  position: relative;
+  display: inline-block;
+  animation: sparkle 2s ease-in-out infinite;
+  animation-delay: calc(var(--index) * 0.2s); /* Delay each word */
+}
+
+.sub-heading span:nth-child(1) { --index: 0; }
+.sub-heading span:nth-child(2) { --index: 1; }
+.sub-heading span:nth-child(3) { --index: 2; }
+.sub-heading span:nth-child(4) { --index: 3; }
+.sub-heading span:nth-child(5) { --index: 4; }
+.sub-heading span:nth-child(6) { --index: 5; }
+.sub-heading span:nth-child(7) { --index: 6; }
+.sub-heading span:nth-child(8) { --index: 7; }
+
+@keyframes sparkle {
+  0%, 100% {
+    color: #666;
+    text-shadow: none;
+  }
+  50% {
+    color: rgb(251, 181, 4); /* Sparkling gold color */
+    text-shadow: 0 0 5px rgba(251, 181, 4, 0.8), 0 0 10px rgba(251, 181, 4, 0.6);
+  }
 }
 
 .rows-container {
