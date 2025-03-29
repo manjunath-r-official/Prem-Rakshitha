@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Invitation.css';
 import Video from '../video/vid.mp4';
 import Carousel from './Carousel';
@@ -16,6 +16,9 @@ import image8 from '../images/carousel/8.jpg';
 const Invitation = () => {
   const weddingDate = new Date('2025-04-20T09:45:00'); // Updated wedding date and time
   const [timeRemaining, setTimeRemaining] = useState({});
+  const rowsRef = useRef([]); // Ref to track rows
+  const headingRef = useRef(null); // Ref to track the heading
+
   const carouselImages = [
     image1,
     image2,
@@ -36,6 +39,41 @@ const Invitation = () => {
     "Sixth Step: Pledge for harmony, longevity, and companionship.",
     "Seventh Step: Promise of lifelong friendship and loyalty."
   ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const element = entry.target;
+          if (entry.isIntersecting) {
+            element.classList.add('in-view'); // Add animation class when in view
+          } else {
+            element.classList.remove('in-view'); // Remove animation class when out of view
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the element is visible
+    );
+
+    // Observe the heading
+    if (headingRef.current) {
+      observer.observe(headingRef.current);
+    }
+
+    // Observe the rows
+    rowsRef.current.forEach((row) => {
+      if (row) observer.observe(row);
+    });
+
+    return () => {
+      if (headingRef.current) {
+        observer.unobserve(headingRef.current);
+      }
+      rowsRef.current.forEach((row) => {
+        if (row) observer.unobserve(row);
+      });
+    };
+  }, []);
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -105,11 +143,6 @@ const Invitation = () => {
         <Carousel images={carouselImages} />
       </div>
 
-      <div className="section-2">
-        <h1>Join Us in Celebrating Love</h1>
-        <p>We are thrilled to invite you to our wedding celebration.</p>
-      </div>
-
       <div className="section-4">
         <div className="groom-name">
           <h1>Pream</h1> {/* Replace with the groom's name */}
@@ -123,29 +156,50 @@ const Invitation = () => {
       </div>
 
       <div className="section-5">
-        {paragraphTexts.map((text, index) => (
-          <div key={index} className={`row ${index % 2 === 0 ? 'even' : 'odd'}`}>
-            {index % 2 === 0 ? (
-              <>
-                <div className="column image-column">
-                  <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} />
-                </div>
-                <div className="column text-column">
-                  <p>{text}</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="column text-column">
-                  <p>{text}</p>
-                </div>
-                <div className="column image-column">
-                  <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} />
-                </div>
-              </>
-            )}
-          </div>
-        ))}
+        <div
+          ref={headingRef} // Attach ref to the heading
+          className="section-5-heading"
+        >
+          <h1 className="main-heading">#Saptapadi</h1>
+          <h2 className="sub-heading">
+            Seven Sacred Steps, Seven Promises, One Beautiful Journey
+            <img src={require('../images/feather.png')} alt="Feather" className="feather-image" />
+          </h2>
+        </div>
+        <div className="rows-container">
+          {paragraphTexts.map((text, index) => (
+            <div
+              key={index}
+              ref={(el) => (rowsRef.current[index] = el)} // Attach ref to each row
+              className={`row ${index % 2 === 0 ? 'even' : 'odd'}`}
+            >
+              {index % 2 === 0 ? (
+                <>
+                  <div className="column image-column">
+                    <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} />
+                  </div>
+                  <div className="column text-column">
+                    <p>{text}</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="column text-column">
+                    <p>{text}</p>
+                  </div>
+                  <div className="column image-column">
+                    <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} />
+                  </div>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="section-2">
+        <h1>Join Us in Celebrating Love</h1>
+        <p>We are thrilled to invite you to our wedding celebration.</p>
       </div>
 
     </div>
