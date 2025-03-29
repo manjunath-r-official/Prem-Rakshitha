@@ -1,13 +1,28 @@
 .invitation-container {
   position: relative;
+  width: 100%; /* Ensure the container does not exceed the viewport width */
+  z-index: 2; /* Ensure it is above the background but below the doors */
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding does not affect width */
+  min-height: 100vh; /* Ensure the container takes up the full viewport height */
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.invitation-container h1 {
+  font-size: 2rem;
+  color: #333;
 }
 
 .video-section {
   width: 100%;
+  box-sizing: border-box; /* Include padding in width calculations */
+  overflow-x: hidden; /* Prevent horizontal overflow from child elements */
 }
 
 .video-section video {
   width: 100%;
+  height: auto; /* Maintain aspect ratio */
 }
 
 .section-1 {
@@ -19,6 +34,9 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
+  width: 100%; /* Ensure child sections take up the full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+  overflow-x: hidden; /* Prevent horizontal overflow from child elements */
 }
 
 .section-1 h1 {
@@ -38,6 +56,9 @@
   padding: 20px;
   text-align: center;
   background-color: #f7f7f7; /* Light background for contrast */
+  width: 100%; /* Ensure child sections take up the full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+  overflow-x: hidden; /* Prevent horizontal overflow from child elements */
 }
 
 .section-2 h1 {
@@ -52,10 +73,16 @@
   font-size: 1rem; /* Match section-1 font size */
 }
 
+.section-3 {
+  width: 100%; /* Ensure child sections take up the full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+  overflow-x: hidden; /* Prevent horizontal overflow from child elements */
+}
+
 .slide-in-left, .slide-in-right {
   width: 90%; /* Adjust width for better alignment */
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  animation-duration: 1.5s; /* Adjust animation duration for smoother transitions */
+  animation-timing-function: ease-in-out;
 }
 
 .slide-in-left {
@@ -84,7 +111,7 @@
 }
 
 .countdown-inline {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Ensure consistent font size */
   margin-top: 5px;
   font-family: 'Georgia', serif;
   font-weight: bold;

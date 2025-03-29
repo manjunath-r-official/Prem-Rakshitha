@@ -1,13 +1,30 @@
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: hidden;
 }
 
 .door-container {
-  position: relative;
+  position: relative; /* Fix the door-container to the viewport */
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  z-index: 10; /* Ensure it is above the invitation background */
+  pointer-events: none; /* Prevent the door-container from blocking interactions */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.door-container.no-z-index {
+  z-index: auto; /* Remove z-index after doors are fully opened */
+}
+
+.wrapper {
+  perspective: 1000px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto; /* Allow interactions with the doors */
 }
 
 .door {
@@ -15,31 +32,53 @@ body {
   top: 0;
   width: 50vw;
   height: 100vh;
-  cursor: pointer;
-  box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.5); /* Add shadow to the edges */
-}
-
-.wrapper {
-  perspective: 1000px;
-  position: relative; /* Ensure the wrapper is positioned relative for absolute children */
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  transition: transform 2s ease-in-out;
+  z-index: 10;
 }
 
 .door-1 {
   left: 0;
   background: url('../images/door1.jpg') right center no-repeat;
-  background-size: cover;
-  transition: transform 5s;
   transform-origin: left;
-  border-right: 5px solid rgba(0, 0, 0, 0.4); /* Increase thickness of the right edge */
 }
 
 .door-2 {
   right: 0;
   background: url('../images/door2.jpg') left center no-repeat;
-  background-size: cover;
-  transition: transform 5s;
   transform-origin: right;
-  border-left: 5px solid rgba(0, 0, 0, 0.4); /* Increase thickness of the left edge */
+}
+
+.wrapper.transformed #door-1 {
+  transform: rotateY(-130deg);
+  visibility: hidden; /* Hide the door completely after it opens */
+}
+
+.wrapper.transformed #door-2 {
+  transform: rotateY(130deg);
+  visibility: hidden; /* Hide the door completely after it opens */
+}
+
+/* Optional: Add a delay to ensure the doors are hidden after the animation */
+.wrapper.transformed #door-1,
+.wrapper.transformed #door-2 {
+  transition: transform 2s ease-in-out, visibility 0s 2s; /* Delay hiding visibility */
+}
+
+.invitation-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Render behind the doors */
+  background-color: white; /* Ensure a visible background */
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  display: flex; /* Ensure proper layout */
+  flex-direction: column; /* Stack content vertically */
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .knob {
@@ -47,41 +86,14 @@ body {
   top: 50%;
   left: 95%;
   transform: translate(-50%, -50%);
-  width: 10vw;
-  height: 5vh;
+  width: 10vw; /* Adjust for mobile */
+  height: 5vh; /* Adjust for mobile */
   background-color: gold;
   border-radius: 50%;
 }
 
-.door-name {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem; /* Adjust font size to 1.5rem */
-  font-family: 'Georgia', serif;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
-               0 0 10px rgba(255, 255, 255, 0.6), 
-               0 0 20px rgba(255, 255, 255, 0.4);
-  animation: sparkle 1s infinite;
-}
-
-@keyframes sparkle {
-  0%, 100% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
-                 0 0 10px rgba(255, 255, 255, 0.6), 
-                 0 0 20px rgba(255, 255, 255, 0.4);
-  }
-  50% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 
-                 0 0 20px rgba(255, 255, 255, 0.8), 
-                 0 0 30px rgba(255, 255, 255, 0.6);
-  }
-}
-
 @media (max-width: 768px) {
+  /* Mobile styles */
   .door {
     width: 50vw;
   }
@@ -90,27 +102,4 @@ body {
     width: 8vw;
     height: 4vh;
   }
-}
-
-.wrapper.transformed #door-1 {
-  transform: rotateY(-130deg);
-}
-
-.wrapper.transformed #door-2 {
-  transform: rotateY(130deg);
-}
-
-.content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.invitation-frame {
-  width: 100%;
-  height: 100%;
-  border: none;
 }

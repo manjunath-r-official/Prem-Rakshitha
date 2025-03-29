@@ -12,10 +12,9 @@ import image5 from '../images/carousel/5.jpg';
 import image6 from '../images/carousel/6.jpg';
 import image7 from '../images/carousel/7.jpg';
 import image8 from '../images/carousel/8.jpg';
-import image9 from '../images/carousel/9.jpg';
 
 const Invitation = () => {
-  const weddingDate = new Date('2025-03-29T00:00:00');
+  const weddingDate = new Date('2025-04-18T00:00:00');
   const [timeRemaining, setTimeRemaining] = useState({});
   const carouselImages = [
     image1,
@@ -26,7 +25,6 @@ const Invitation = () => {
     image6,
     image7,
     image8,
-    image9,
   ]; // Use imported images
 
   useEffect(() => {
@@ -96,7 +94,7 @@ const Invitation = () => {
       <div className="section-3">
         <Carousel images={carouselImages} />
       </div>
-      
+
       <div className="section-2">
         <h1>Join Us in Celebrating Love</h1>
         <p>We are thrilled to invite you to our wedding celebration.</p>
