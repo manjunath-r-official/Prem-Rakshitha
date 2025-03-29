@@ -14,7 +14,7 @@ import image7 from '../images/carousel/7.jpg';
 import image8 from '../images/carousel/8.jpg';
 
 const Invitation = () => {
-  const weddingDate = new Date('2025-04-18T00:00:00');
+  const weddingDate = new Date('2025-04-19T00:00:00');
   const [timeRemaining, setTimeRemaining] = useState({});
   const carouselImages = [
     image1,
