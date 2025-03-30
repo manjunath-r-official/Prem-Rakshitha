@@ -470,13 +470,12 @@
   border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   text-align: center;
   backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -529,8 +528,7 @@
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   text-align: center;
   opacity: 0; /* Initially hidden */
@@ -547,6 +545,7 @@
   font-family: 'Alex Brush', cursive;
   font-size: 2rem;
   color: rgb(251, 181, 4); /* Gold color */
+  margin-top: 0px;
   margin-bottom: 10px;
 }
 
@@ -587,6 +586,45 @@
 
 .whatsapp-button:hover {
   background-color: #d4a304; /* Darker green on hover */
+}
+
+.card-image {
+  width: 100%; /* Ensure the image spans the full width of the card */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0; /* Rounded corners for the top */
+}
+
+.card-content {
+  padding: 0px 20px 20px 20px;
+  position: relative;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card.in-view .card-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0; /* Rounded corners for the top */
+}
+
+.card-content {
+  position: relative;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card.in-view .card-content {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
