@@ -6,7 +6,6 @@ const App = () => {
   const [areDoorsOpen, setDoorsOpen] = useState(false);
 
   useEffect(() => {
-    // Automatically open the doors after a short delay when the page loads
     const timer = setTimeout(() => {
       setDoorsOpen(true);
     }, 1000); // Delay of 1 second
