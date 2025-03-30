@@ -13,7 +13,7 @@
   height: 150px;
   transform-style: preserve-3d;
   animation: rotate 25s infinite linear;
-  --rotateX: -15deg; /* Add tilt for 3D effect */
+  --rotateX: -8deg; /* Add tilt for 3D effect */
   transform: rotateX(var(--rotateX)); /* Apply the tilt */
 }
 
@@ -60,4 +60,61 @@
   font-size: 1rem;
   color: #333;
   text-align: center;
+}
+
+.three-d-slider-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.three-d-slider-heading {
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5rem;
+  color: rgb(251, 181, 4) !important;
+  text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.6);
+  margin-bottom: 10px;
+}
+
+.three-d-slider-underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto 20px;
+  width: 200px;
+  height: 2px;
+  background-color: rgb(251, 181, 4); /* Gold color */
+}
+
+.diamond {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(251, 181, 4); /* Gold color */
+  transform: rotate(45deg);
+  animation: flicker 1.5s infinite ease-in-out;
+}
+
+.diamond:nth-child(1) {
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.diamond:nth-child(2) {
+  left: 50%;
+  animation-delay: 0.5s;
+}
+
+.diamond:nth-child(3) {
+  left: 70%;
+  animation-delay: 1s;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }

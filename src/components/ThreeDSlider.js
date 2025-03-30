@@ -15,19 +15,24 @@ const ThreeDSlider = () => {
   ];
 
   return (
-    <div className="three-d-slider">
-      <div className="slider-wrapper">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className="slider-card"
-            style={{
-              "--i": index,
-            }}
-          >
-            <img src={slide.image} alt={`Slide ${index + 1}`} className="slider-image" />
-          </div>
-        ))}
+    <div className="three-d-slider-section">
+      <h1 className="three-d-slider-heading">
+        Cherished Moments, <br></br> Captured Forever
+      </h1>
+      <div className="three-d-slider">
+        <div className="slider-wrapper">
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className="slider-card"
+              style={{
+                "--i": index,
+              }}
+            >
+              <img src={slide.image} alt={`Slide ${index + 1}`} className="slider-image" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

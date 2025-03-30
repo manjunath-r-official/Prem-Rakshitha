@@ -210,7 +210,6 @@ const Invitation = () => {
       </div>
 
       <div className="section-7">
-        <h1 className="slider-cards-heading">Explore the Journey</h1>
         <ThreeDSlider /> {/* Add the 3D slider here */}
       </div>
 
