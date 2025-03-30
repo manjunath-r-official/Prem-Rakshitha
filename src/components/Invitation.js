@@ -219,17 +219,37 @@ const Invitation = () => {
       </div>
 
       <div className="section-6">
+        
         <div
-          ref={(el) => (cardsRef.current[0] = el)} // Attach ref to the venue card
+          ref={(el) => (cardsRef.current[0] = el)} // Attach ref to the reception card
+          className="card reception-card"
+        >
+          <h2>Reception</h2>
+          <p>Date: April 19th, 2025</p>
+          <p>Time: 6:00 PM</p>
+        </div>
+
+        <div
+          ref={(el) => (cardsRef.current[1] = el)} // Attach ref to the wedding card
+          className="card wedding-card"
+        >
+          <h2>Wedding</h2>
+          <p>Date: April 20th, 2025</p>
+          <p>Time: 9:45 AM to 10:45 AM</p>
+        </div>
+
+        <div
+          ref={(el) => (cardsRef.current[2] = el)} // Attach ref to the venue card
           className="card venue-card"
         >
           <h2>Venue</h2>
-          <p>123 Wedding Street, Celebration City</p>
+          <p>Jayamma Kalegowda Kalyana Mantapa
+          Chinakuruli, Mysore Road - 571455</p>
           <button
             className="google-maps-button"
             onClick={() =>
               window.open(
-                'https://www.google.com/maps/place/anekal,+bangalore',
+                'https://www.google.com/maps/place/Jayamma+Kalegowda+Kalyana+Mantapa/@12.5393471,76.6007737,17z/data=!3m1!4b1!4m6!3m5!1s0x3baf83208a751ba3:0xa5a8052561fdfc92!8m2!3d12.5393471!4d76.6007737!16s%2Fg%2F11j0v2ckzr?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D',
                 '_blank'
               )
             }
@@ -239,36 +259,17 @@ const Invitation = () => {
         </div>
 
         <div
-          ref={(el) => (cardsRef.current[1] = el)} // Attach ref to the reception card
-          className="card reception-card"
-        >
-          <h2>Reception</h2>
-          <p>Date: April 19th, 2025</p>
-          <p>Time: 6:00 PM</p>
-          <p>Location: Grand Celebration Hall, Celebration City</p>
-        </div>
-
-        <div
-          ref={(el) => (cardsRef.current[2] = el)} // Attach ref to the wedding card
-          className="card wedding-card"
-        >
-          <h2>Wedding</h2>
-          <p>Date: April 20th, 2025</p>
-          <p>Time: 9:45 AM</p>
-          <p>Location: Sacred Wedding Temple, Celebration City</p>
-        </div>
-
-        <div
           ref={(el) => (cardsRef.current[3] = el)} // Attach ref to the contact card
           className="card contact-card"
         >
           <h2>Contact Us</h2>
-          <p>Phone: +1 234 567 890</p>
-          <p>Email: wedding@celebration.com</p>
+          <p>+91 9108710537</p>
+          <p>+91 9740281336</p>
+          <p>+91 8892346969</p>
           <button
             className="whatsapp-button"
             onClick={() =>
-              window.open('https://wa.me/7483147151', '_blank') // Replace 1234567890 with your phone number
+              window.open('https://wa.me/+919108710537', '_blank')
             }
           >
             WhatsApp Me

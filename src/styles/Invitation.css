@@ -464,6 +464,63 @@
   background-color: #f9f9f9; /* Light background for contrast */
 }
 
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 8px 20px rgba(251, 181, 4, 0.6); /* Add glowing shadow */
+}
+
+.card:hover::before {
+  opacity: 1; /* Show glowing effect on hover */
+}
+
+.card h2 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 2rem;
+  color: rgb(251, 181, 4); /* Gold color */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #fff; /* White text for contrast */
+  margin: 5px 0;
+}
+
+.google-maps-button,
+.whatsapp-button {
+  background-color: rgb(251, 181, 4); /* Gold color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.google-maps-button:hover,
+.whatsapp-button:hover {
+  background-color: #d4a304; /* Darker gold on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
 .section-7 {
   background-color: #f8fe000f;
 }
