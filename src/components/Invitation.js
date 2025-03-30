@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Invitation.css';
 import Video from '../video/vid.mp4';
 import Carousel from './Carousel';
+import ThreeDSlider from "./ThreeDSlider"; // Import the ThreeDSlider component
 
 // Import images
 import image1 from '../images/carousel/1.jpg';
@@ -53,7 +54,7 @@ const Invitation = () => {
           }
         });
       },
-      { threshold: 0.2 } // Trigger when 50% of the element is visible
+      { threshold: 0 } // Trigger when 50% of the element is visible
     );
 
     // Observe the heading
@@ -187,7 +188,7 @@ const Invitation = () => {
               {index % 2 === 0 ? (
                 <>
                   <div className="column image-column">
-                    <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} />
+                    <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} loading="lazy" />
                   </div>
                   <div className="column text-column">
                     <p>{text}</p>
@@ -199,13 +200,18 @@ const Invitation = () => {
                     <p>{text}</p>
                   </div>
                   <div className="column image-column">
-                    <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} />
+                    <img src={require(`../images/carousel/${index + 1}.jpg`)} alt={`Row ${index + 1}`} loading="lazy" />
                   </div>
                 </>
               )}
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="section-7">
+        <h1 className="slider-cards-heading">Explore the Journey</h1>
+        <ThreeDSlider /> {/* Add the 3D slider here */}
       </div>
 
       <div className="section-2">
