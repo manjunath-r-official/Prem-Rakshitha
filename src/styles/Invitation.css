@@ -58,7 +58,7 @@
   align-items: center;
   padding: 20px;
   text-align: center;
-  background-color: #f7f7f7; /* Light background for contrast */
+  background-color: #ff980012;
   width: 100%; /* Ensure child sections take up the full width */
   box-sizing: border-box; /* Include padding in width calculations */
   overflow-x: hidden; /* Prevent horizontal overflow from child elements */
@@ -462,6 +462,10 @@
   gap: 20px;
   padding: 20px;
   background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.section-7 {
+  background-color: #f8fe000f;
 }
 
 .card {

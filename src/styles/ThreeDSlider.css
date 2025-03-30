@@ -13,7 +13,7 @@
   height: 150px;
   transform-style: preserve-3d;
   animation: rotate 25s infinite linear;
-  --rotateX: -8deg; /* Add tilt for 3D effect */
+  --rotateX: -7deg; /* Add tilt for 3D effect */
   transform: rotateX(var(--rotateX)); /* Apply the tilt */
 }
 
@@ -35,6 +35,12 @@
   transform: rotateY(calc(var(--i) * 72deg)) translateZ(200px); /* Reduce translateZ for less spacing */
   backface-visibility: visible; /* Make backface visible */
   opacity: 1; /* Front face opacity */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow around the cards */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.slider-card:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
 .slider-card::after {
@@ -64,7 +70,6 @@
 
 .three-d-slider-section {
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .three-d-slider-heading {
