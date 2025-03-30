@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Pream-Rakshitha/static/css/main.871a2886.css",
-    "main.js": "/Pream-Rakshitha/static/js/main.9d36ebab.js",
+    "main.js": "/Pream-Rakshitha/static/js/main.72c2a0e7.js",
     "static/media/vid.mp4": "/Pream-Rakshitha/static/media/vid.ef6d0ea7ddf291e63642.mp4",
     "static/media/feather.png": "/Pream-Rakshitha/static/media/feather.8eb9fcb26299097db628.png",
     "static/media/7.jpg": "/Pream-Rakshitha/static/media/7.748ce3070ae714154426.jpg",
@@ -17,10 +17,10 @@
     "static/media/2.jpg": "/Pream-Rakshitha/static/media/2.86ebfcca982939b7e46f.jpg",
     "index.html": "/Pream-Rakshitha/index.html",
     "main.871a2886.css.map": "/Pream-Rakshitha/static/css/main.871a2886.css.map",
-    "main.9d36ebab.js.map": "/Pream-Rakshitha/static/js/main.9d36ebab.js.map"
+    "main.72c2a0e7.js.map": "/Pream-Rakshitha/static/js/main.72c2a0e7.js.map"
   },
   "entrypoints": [
     "static/css/main.871a2886.css",
-    "static/js/main.9d36ebab.js"
+    "static/js/main.72c2a0e7.js"
   ]
 }
