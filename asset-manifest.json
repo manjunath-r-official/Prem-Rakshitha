@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/Pream-Rakshitha/static/css/main.934ebaf5.css",
-    "main.js": "/Pream-Rakshitha/static/js/main.d7ded0e3.js",
+    "main.css": "/Pream-Rakshitha/static/css/main.69c7113f.css",
+    "main.js": "/Pream-Rakshitha/static/js/main.7e902f2c.js",
     "static/media/vid.mp4": "/Pream-Rakshitha/static/media/vid.ef6d0ea7ddf291e63642.mp4",
     "static/media/bg2.jpg": "/Pream-Rakshitha/static/media/bg2.88c7b395ce2431476fce.jpg",
     "static/media/feather.png": "/Pream-Rakshitha/static/media/feather.8eb9fcb26299097db628.png",
+    "static/media/mandala.png": "/Pream-Rakshitha/static/media/mandala.2186e5973ea26408753d.png",
     "static/media/7.jpg": "/Pream-Rakshitha/static/media/7.748ce3070ae714154426.jpg",
     "static/media/wedding.jpeg": "/Pream-Rakshitha/static/media/wedding.b5c97fee6c5bf04ada30.jpeg",
     "static/media/reception.jpeg": "/Pream-Rakshitha/static/media/reception.59bfb0fbf51a0206e30e.jpeg",
@@ -19,11 +20,11 @@
     "static/media/8.jpg": "/Pream-Rakshitha/static/media/8.0714ee2ea84238fa26b5.jpg",
     "static/media/2.jpg": "/Pream-Rakshitha/static/media/2.86ebfcca982939b7e46f.jpg",
     "index.html": "/Pream-Rakshitha/index.html",
-    "main.934ebaf5.css.map": "/Pream-Rakshitha/static/css/main.934ebaf5.css.map",
-    "main.d7ded0e3.js.map": "/Pream-Rakshitha/static/js/main.d7ded0e3.js.map"
+    "main.69c7113f.css.map": "/Pream-Rakshitha/static/css/main.69c7113f.css.map",
+    "main.7e902f2c.js.map": "/Pream-Rakshitha/static/js/main.7e902f2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.934ebaf5.css",
-    "static/js/main.d7ded0e3.js"
+    "static/css/main.69c7113f.css",
+    "static/js/main.7e902f2c.js"
   ]
 }
