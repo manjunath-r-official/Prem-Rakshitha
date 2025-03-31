@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Prem-Rakshitha/static/css/main.32490edf.css",
+    "main.css": "/Prem-Rakshitha/static/css/main.25ecc579.css",
     "main.js": "/Prem-Rakshitha/static/js/main.ef121be6.js",
     "static/media/vid.mp4": "/Prem-Rakshitha/static/media/vid.ef6d0ea7ddf291e63642.mp4",
     "static/media/bg2.jpg": "/Prem-Rakshitha/static/media/bg2.88c7b395ce2431476fce.jpg",
@@ -10,21 +10,21 @@
     "static/media/wedding.jpeg": "/Prem-Rakshitha/static/media/wedding.b5c97fee6c5bf04ada30.jpeg",
     "static/media/reception.jpeg": "/Prem-Rakshitha/static/media/reception.59bfb0fbf51a0206e30e.jpeg",
     "static/media/4.jpg": "/Prem-Rakshitha/static/media/4.859d25781320d241bf90.jpg",
-    "static/media/door2.jpg": "/Prem-Rakshitha/static/media/door2.41e9714a46e26e52f61d.jpg",
-    "static/media/door1.jpg": "/Prem-Rakshitha/static/media/door1.c191fa4d2708704f4dff.jpg",
     "static/media/6.jpg": "/Prem-Rakshitha/static/media/6.834eb6cffa0b3b6253d3.jpg",
     "static/media/1.jpg": "/Prem-Rakshitha/static/media/1.7cf1e0d92fda5ce8afd3.jpg",
     "static/media/5.jpg": "/Prem-Rakshitha/static/media/5.1063354082404179074a.jpg",
     "static/media/9.jpg": "/Prem-Rakshitha/static/media/9.4806920c9a72838d2443.jpg",
     "static/media/3.jpg": "/Prem-Rakshitha/static/media/3.8e55253acf109a37de75.jpg",
+    "static/media/door2.jpg": "/Prem-Rakshitha/static/media/door2.e2fecbca554db7fc1bf1.jpg",
     "static/media/8.jpg": "/Prem-Rakshitha/static/media/8.0714ee2ea84238fa26b5.jpg",
     "static/media/2.jpg": "/Prem-Rakshitha/static/media/2.86ebfcca982939b7e46f.jpg",
+    "static/media/door1.jpg": "/Prem-Rakshitha/static/media/door1.8a725ef492158a25760f.jpg",
     "index.html": "/Prem-Rakshitha/index.html",
-    "main.32490edf.css.map": "/Prem-Rakshitha/static/css/main.32490edf.css.map",
+    "main.25ecc579.css.map": "/Prem-Rakshitha/static/css/main.25ecc579.css.map",
     "main.ef121be6.js.map": "/Prem-Rakshitha/static/js/main.ef121be6.js.map"
   },
   "entrypoints": [
-    "static/css/main.32490edf.css",
+    "static/css/main.25ecc579.css",
     "static/js/main.ef121be6.js"
   ]
 }
