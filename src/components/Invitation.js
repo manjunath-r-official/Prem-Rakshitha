@@ -248,8 +248,11 @@ const Invitation = () => {
           ref={(el) => (cardsRef.current[2] = el)} // Attach ref to the venue card
           className="card venue-card"
         >
+          <div className="mandala-overlay venue-mandala">
+            <img src={require('../images/mandala.png')} alt="Mandala" className="mandala-image" />
+          </div>
           <img src={require('../images/bg3.jpg')} alt="Venue" className="card-image" />
-          <div className="card-content">
+          <div className="card-content venue-content">
             <h2>Venue</h2>
             <p>Jayamma Kalegowda Kalyana Mantapa</p>
             <p>Chinakuruli, Mysore Road - 571455</p>
@@ -271,6 +274,9 @@ const Invitation = () => {
           ref={(el) => (cardsRef.current[3] = el)} // Attach ref to the contact card
           className="card contact-card"
         >
+          <div className="mandala-overlay">
+            <img src={require('../images/mandala.png')} alt="Mandala" className="mandala-image" />
+          </div>
           <img src={require('../images/bg2.jpg')} alt="Contact" className="card-image" />
           <div className="card-content">
             <h2>Contact Us</h2>
