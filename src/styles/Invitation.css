@@ -18,6 +18,7 @@
 }
 
 .video-section {
+  position: relative; /* Ensure text is positioned relative to the video */
   width: 100%;
   box-sizing: border-box; /* Include padding in width calculations */
   overflow-x: hidden; /* Prevent horizontal overflow from child elements */
@@ -26,6 +27,68 @@
 .video-section video {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
+}
+
+.animated-text {
+  position: absolute;
+  bottom: 10%; /* Position the text near the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: 'Alex Brush', cursive;
+  font-size: 1.5rem; /* Slightly larger font size for emphasis */
+  color: white; /* Make the names white */
+  text-shadow: 0 0 10px rgb(255, 217, 0), 
+               0 0 20px rgb(255, 255, 255), 
+               0 0 30px rgb(163, 158, 147); /* Glowing shadow effect */
+  display: flex;
+  gap: 15px; /* Add spacing between words */
+  animation: heartbeat 1.5s infinite; /* Heartbeat animation */
+}
+
+.animated-text span {
+  display: inline-block;
+}
+
+.animated-text .weds {
+  background: linear-gradient(90deg, rgb(0, 242, 255), rgb(255, 255, 255), green, gold, rgb(255, 255, 255)); /* Initial gradient colors */
+  background-size: 300% 300%; /* Increase background size for smooth animation */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  animation: gradientShift 3s infinite; /* Animate the gradient */
+  text-shadow: none; /* Remove the shadow for a clean gradient look */
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: translateX(-50%) scale(1); /* Normal size */
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1); /* Slightly larger for heartbeat effect */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -55%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  50% {
+    background-position: 100% 50%; /* Midway position */
+  }
+  100% {
+    background-position: 0% 50%; /* End position */
+  }
 }
 
 .section-1 {
@@ -320,6 +383,34 @@
   left: 70%;
   transform: translateX(-50%); /* Center the feather horizontally */
   animation: scribble 1.5s ease-in-out infinite; /* Scribble animation for the feather */
+}
+
+.feather-animation {
+  position: absolute;
+  bottom: 15%; /* Position the feather slightly above the text */
+  left: 50%;
+  transform: translateX(-50%) translateY(0) rotate(0deg) !important;
+  width: 50px; /* Adjust size of the feather */
+  height: auto;
+  animation: float 3s ease-in-out infinite, rotate 6s linear infinite !important; /* Floating and rotating animation */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0); /* Start and end at the same position */
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px); /* Slight upward float */
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg); /* Start rotation */
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg); /* Full rotation */
+  }
 }
 
 .sub-heading {

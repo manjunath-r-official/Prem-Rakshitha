@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Invitation.css';
 import Video from '../video/vid.mp4';
+import bannerVideo from '../video/bannervideo.mp4';
 import Carousel from './Carousel';
 import ThreeDSlider from "./ThreeDSlider"; // Import the ThreeDSlider component
 
@@ -120,9 +121,18 @@ const Invitation = () => {
     <div className="invitation-container">
       <div className="video-section">
         <video autoPlay muted loop>
-          <source src={Video} type="video/mp4" />
-          this is video
+          <source src={bannerVideo} type="video/mp4" />
         </video>
+        <div className="animated-text">
+          <span>Prem</span>
+          <span className="weds">Weds</span>
+          <span>Rakshitha</span>
+        </div>
+        <img
+          src={require('../images/feather.png')}
+          alt="Feather"
+          className="feather-animation"
+        />
       </div>
 
       <div className="section-1">
