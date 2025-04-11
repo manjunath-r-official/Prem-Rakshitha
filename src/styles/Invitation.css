@@ -10,7 +10,11 @@
   min-height: 100vh; /* Ensure the container takes up the full viewport height */
   overflow-y: auto; /* Allow vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-snap-type: y mandatory; /* Enable scroll snapping */
+  overflow-y: scroll; /* Allow vertical scrolling */
 }
+
+
 
 .invitation-container h1 {
   font-size: 2rem;
@@ -738,6 +742,91 @@
 .card.in-view .card-content {
   transform: translateY(0);
   opacity: 1;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: #f9f9f9;
+}
+
+.footer-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* From Uiverse.io by alshahwan */ 
+.footerwatsapp {
+  background-color: #fff;
+  border: 1px solid #25D366;
+  padding: 5px;
+  position: relative;
+  width: 10em; /* Increased width to fit text */
+  height: 2.5em; /* Increased height for better spacing */
+  transition: 0.5s;
+  font-size: 0.9rem; /* Adjusted font size */
+  border-radius: 0.4em;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Space out text and icon */
+  box-sizing: border-box; /* Include padding in width/height */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.footerwatsapp p {
+  margin: 0;
+  padding: 0;
+  color: #25D366;
+  transition: 0.5s;
+}
+
+.footerwatsapp svg {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff;
+}
+
+.footerwatsapp:hover p {
+  color: #fff;
+}
+
+.footerwatsapp:hover svg {
+  opacity: 1;
+}
+
+.footerwatsapp:hover {
+  background-color: #25D366;
+}
+
+.footer-whatsapp-text {
+  color: #25D366; /* WhatsApp green color */
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 10px;
+  display: flex; /* Align text and logo */
+  align-items: center; /* Vertically center the logo and text */
+  justify-content: center; /* Center the line horizontally */
+  gap: 5px; /* Add spacing between the logo and text */
+}
+
+.footer-whatsapp-text:hover {
+  color: #1da851; /* Darker green on hover */
+}
+
+.whatsapp-logo {
+  width: 16px; /* Adjust size as needed */
+  height: 16px;
 }
 
 @media (max-width: 768px) {
