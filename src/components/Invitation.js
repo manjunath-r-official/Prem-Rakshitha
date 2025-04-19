@@ -254,7 +254,7 @@ const Invitation = () => {
           onClick={handlePoppersButtonClick}
           onMouseEnter={handleExpand}
         >
-          <span className="magic-icon">✨</span>
+          <span className="magic-icon">🎉</span> {/* Changed emoji to party popper */}
           <span className="button-text">{buttonText}</span>
         </div>
       )}
