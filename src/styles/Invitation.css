@@ -909,9 +909,11 @@
 
 .stop-poppers-button {
   position: fixed;
+  right: 10px; /* Stick to the right side of the screen */
+  bottom: 20px; /* Position above the bottom */
   width: 50px;
   height: 50px;
-  background: transparent;
+  background: rgb(251, 181, 4);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -919,13 +921,8 @@
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1001;
-  cursor: grab;
+  cursor: pointer;
   transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.stop-poppers-button.dragging {
-  cursor: grabbing;
-  transition: none; /* Disable transition while dragging */
 }
 
 .stop-poppers-button.expanded {
@@ -944,27 +941,16 @@
 
 .stop-poppers-button .button-text {
   display: none;
-  font-size: 0.8rem; /* Smaller text size */
-  margin-left: 10px;
+  color: black !important;
+  font-size: 1rem !important;
+  margin-left: 0px !important;
   pointer-events: none;
+  color: black; /* Set text color to yellow */
+  font-family: 'Alex Brush', cursive; /* Apply cursive font */
 }
 
 .stop-poppers-button.expanded .button-text {
   display: inline;
-}
-
-.stop-poppers-button.bubble {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  justify-content: center;
-  padding: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.stop-poppers-button.bubble .button-text {
-  display: none; /* Hide text when in bubble mode */
 }
 
 .party-popper {
@@ -989,7 +975,7 @@
   position: fixed;
   width: 30px;
   height: 40px;
-  background: transparent;
+  background: white;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -1025,6 +1011,8 @@
   font-size: 0.8rem; /* Smaller text size */
   margin-left: 10px;
   pointer-events: none;
+  color: yellow; /* Set text color to yellow */
+  font-family: 'Alex Brush', cursive; /* Apply cursive font */
 }
 
 .stop-poppers-button:hover .button-text {

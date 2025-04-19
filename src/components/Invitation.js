@@ -22,8 +22,6 @@ const Invitation = () => {
   const [showModal, setShowModal] = useState(false); // Initially hide the modal
   const [showPoppers, setShowPoppers] = useState(false); // Initially disable party poppers
   const [buttonText, setButtonText] = useState("Stop Poppers"); // Control button text
-  const [buttonPosition, setButtonPosition] = useState({ x: window.innerWidth - 60, y: window.innerHeight - 100 }); // Default to the right edge
-  const [isDragging, setIsDragging] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false); // Track if the button is expanded
   const shrinkTimeoutRef = useRef(null); // Ref to manage shrinking timeout
   const rowsRef = useRef([]); // Ref to track rows
@@ -174,36 +172,6 @@ const Invitation = () => {
     startShrinkTimeout(); // Start shrinking timeout after click
   };
 
-  const handleDragStart = (e) => {
-    setIsDragging(true);
-    clearTimeout(shrinkTimeoutRef.current); // Clear shrinking timeout while dragging
-  };
-
-  const handleDrag = (e) => {
-    if (isDragging) {
-      const clientX = e.clientX || (e.touches && e.touches[0].clientX);
-      const clientY = e.clientY || (e.touches && e.touches[0].clientY);
-
-      setButtonPosition({
-        x: Math.max(10, Math.min(clientX - 25, window.innerWidth - 60)), // Keep within horizontal bounds
-        y: Math.max(10, Math.min(clientY - 25, window.innerHeight - 60)), // Keep within vertical bounds
-      });
-    }
-  };
-
-  const handleDragEnd = () => {
-    setIsDragging(false);
-    // Stick to the nearest edge
-    setButtonPosition((prev) => {
-      const isLeftEdge = prev.x < window.innerWidth / 2;
-      return {
-        x: isLeftEdge ? 10 : window.innerWidth - 60, // Stick to left or right edge
-        y: prev.y, // Maintain vertical position
-      };
-    });
-    startShrinkTimeout(); // Start shrinking timeout after dragging ends
-  };
-
   const startShrinkTimeout = () => {
     clearTimeout(shrinkTimeoutRef.current); // Clear any existing timeout
     shrinkTimeoutRef.current = setTimeout(() => {
@@ -217,13 +185,7 @@ const Invitation = () => {
   };
 
   return (
-    <div
-      className="invitation-container"
-      onMouseMove={handleDrag}
-      onMouseUp={handleDragEnd}
-      onTouchMove={handleDrag}
-      onTouchEnd={handleDragEnd}
-    >
+    <div className="invitation-container">
       {isTimeUp && showModal && (
         <div
           className="modal-overlay"
@@ -244,17 +206,11 @@ const Invitation = () => {
       {isTimeUp && renderPartyPoppers()}
       {isTimeUp && (
         <div
-          className={`stop-poppers-button ${isDragging ? 'dragging' : ''} ${isExpanded ? 'expanded' : ''} ${buttonPosition.x === 10 ? 'bubble' : ''}`}
-          style={{ left: buttonPosition.x, top: buttonPosition.y }}
-          onMouseDown={handleDragStart}
-          onTouchStart={(e) => {
-            handleDragStart(e);
-            handleExpand(); // Trigger expand and shrink timeout on touch
-          }}
+          className={`stop-poppers-button ${isExpanded ? 'expanded' : ''}`}
           onClick={handlePoppersButtonClick}
           onMouseEnter={handleExpand}
         >
-          <span className="magic-icon">🎉</span> {/* Changed emoji to party popper */}
+          <span className="magic-icon">🎉</span> {/* Party popper emoji */}
           <span className="button-text">{buttonText}</span>
         </div>
       )}
