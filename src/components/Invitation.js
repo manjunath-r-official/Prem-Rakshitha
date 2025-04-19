@@ -15,7 +15,7 @@ import image7 from '../images/carousel/7.jpg';
 import image8 from '../images/carousel/8.jpg';
 
 const Invitation = () => {
-  const weddingDate = new Date('2025-04-19T10:20:00'); // Updated wedding date and time
+  const weddingDate = new Date('2025-04-19T11:12:00'); // Updated wedding date and time
   const [timeRemaining, setTimeRemaining] = useState({});
   const [isTimeUp, setIsTimeUp] = useState(false);
   const [liveTime, setLiveTime] = useState(0); // Track live time after countdown ends
@@ -154,6 +154,7 @@ const Invitation = () => {
         className="party-popper"
         style={{
           left: `${Math.random() * 100}%`,
+          top: `${-Math.random() * 100}vh`,
           animationDelay: `${Math.random() * 5}s`,
           backgroundColor: `hsl(${Math.random() * 360}, 100%, 50%)`,
         }}
