@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/Prem-Rakshitha/static/css/main.d2c4f64a.css",
-    "main.js": "/Prem-Rakshitha/static/js/main.ca1610a6.js",
-    "static/media/vid.mp4": "/Prem-Rakshitha/static/media/vid.ef6d0ea7ddf291e63642.mp4",
+    "main.css": "/Prem-Rakshitha/static/css/main.92fbddfb.css",
+    "main.js": "/Prem-Rakshitha/static/js/main.9f859046.js",
     "static/media/bannervideo.mp4": "/Prem-Rakshitha/static/media/bannervideo.a94e8e20e5f81d12aadf.mp4",
     "static/media/bg2.jpg": "/Prem-Rakshitha/static/media/bg2.88c7b395ce2431476fce.jpg",
     "static/media/feather.png": "/Prem-Rakshitha/static/media/feather.8eb9fcb26299097db628.png",
@@ -11,21 +10,28 @@
     "static/media/wedding.jpeg": "/Prem-Rakshitha/static/media/wedding.b5c97fee6c5bf04ada30.jpeg",
     "static/media/reception.jpeg": "/Prem-Rakshitha/static/media/reception.59bfb0fbf51a0206e30e.jpeg",
     "static/media/4.jpg": "/Prem-Rakshitha/static/media/4.859d25781320d241bf90.jpg",
+    "static/media/s6.jpeg": "/Prem-Rakshitha/static/media/s6.279bb52ac6b8daaa7dcc.jpeg",
     "static/media/6.jpg": "/Prem-Rakshitha/static/media/6.834eb6cffa0b3b6253d3.jpg",
     "static/media/1.jpg": "/Prem-Rakshitha/static/media/1.7cf1e0d92fda5ce8afd3.jpg",
     "static/media/5.jpg": "/Prem-Rakshitha/static/media/5.1063354082404179074a.jpg",
     "static/media/9.jpg": "/Prem-Rakshitha/static/media/9.4806920c9a72838d2443.jpg",
     "static/media/3.jpg": "/Prem-Rakshitha/static/media/3.8e55253acf109a37de75.jpg",
     "static/media/door2.jpg": "/Prem-Rakshitha/static/media/door2.e2fecbca554db7fc1bf1.jpg",
+    "static/media/s7.jpeg": "/Prem-Rakshitha/static/media/s7.c4d74db0b499871b097a.jpeg",
     "static/media/8.jpg": "/Prem-Rakshitha/static/media/8.0714ee2ea84238fa26b5.jpg",
     "static/media/2.jpg": "/Prem-Rakshitha/static/media/2.86ebfcca982939b7e46f.jpg",
     "static/media/door1.jpg": "/Prem-Rakshitha/static/media/door1.8a725ef492158a25760f.jpg",
+    "static/media/s4.jpeg": "/Prem-Rakshitha/static/media/s4.ae5cf3747d05226f0ac4.jpeg",
+    "static/media/s5.jpeg": "/Prem-Rakshitha/static/media/s5.0a116b860332fbc73cb6.jpeg",
+    "static/media/s3.jpeg": "/Prem-Rakshitha/static/media/s3.b829dd593a315626f2f4.jpeg",
+    "static/media/s2.jpeg": "/Prem-Rakshitha/static/media/s2.047a86973f0f0df02e09.jpeg",
+    "static/media/s1.jpeg": "/Prem-Rakshitha/static/media/s1.b47bad18a116283dbb35.jpeg",
     "index.html": "/Prem-Rakshitha/index.html",
-    "main.d2c4f64a.css.map": "/Prem-Rakshitha/static/css/main.d2c4f64a.css.map",
-    "main.ca1610a6.js.map": "/Prem-Rakshitha/static/js/main.ca1610a6.js.map"
+    "main.92fbddfb.css.map": "/Prem-Rakshitha/static/css/main.92fbddfb.css.map",
+    "main.9f859046.js.map": "/Prem-Rakshitha/static/js/main.9f859046.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2c4f64a.css",
-    "static/js/main.ca1610a6.js"
+    "static/css/main.92fbddfb.css",
+    "static/js/main.9f859046.js"
   ]
 }
